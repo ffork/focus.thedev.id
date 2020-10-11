@@ -1,0 +1,24 @@
+{
+  "name": "vi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncp ./content/ ./public && html-minifier --input-dir ./content --output-dir ./public --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --file-ext html --minify-css true --minify-js true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hifocus/Vi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hifocus/Vi/issues"
+  },
+  "homepage": "https://github.com/hifocus/Vi#readme",
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "ncp": "^2.0.0"
+  }
+}

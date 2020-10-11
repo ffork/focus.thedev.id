@@ -1,0 +1,382 @@
+<!-- This page is modified from https://github.com/iissnan/iissnan.github.com -->
+
+<!doctype html>
+<html lang="zh" class="no-js dark">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focus the Dev, Phtographer, Chinese Writer.</title>
+  <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
+  <meta name="description" content="Focus' personal homepage.">
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/main.css"/> -->
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/main.min.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=lato&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="https://ae01.alicdn.com/kf/UTB8R57Nn0nJXKJkSaiyq6AhwXXak.jpg">
+</head>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html { transition: background-color .25s ease; }
+
+body {
+  font-family: 'Lato', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+p { margin: 20px 0; }
+
+ul, ol { list-style: none; }
+
+
+/* Fonts
+/* ================================================= */
+/* @font-face {
+  font-family: 'icomoon';
+  src:
+    url('../fonts/icomoon.ttf?mrs7x8') format('truetype'),
+    url('../fonts/icomoon.woff?mrs7x8') format('woff'),
+    url('../fonts/icomoon.svg?mrs7x8#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* [class^="icon-"], [class*=" icon-"] { */
+  /* use !important to prevent issues with browser extensions that change fonts */
+  /* font-family: 'Material Icons', sans-serif!important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1; */
+
+  /* Better Font Rendering =========== */
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-map-pin:before {
+  content: "\e902";
+}
+.icon-moon:before {
+  content: "\e900";
+}
+.icon-sun:before {
+  content: "\e901";
+}
+.icon-quotes-left:before {
+  content: "\e977";
+}
+.icon-quotes-right:before {
+  content: "\e978";
+} */
+
+
+/* Animation
+/* ================================================= */
+.animate-slide-in-down,
+.animate-slide-in-up {
+  position: relative;
+  opacity: 0;
+}
+
+.animate-slide-in-down { top: -10px; }
+
+.animate-slide-in-up { bottom: -10px; }
+
+.no-js .animate-slide-in-down,
+.no-js .animate-slide-in-up { opacity: 1; }
+
+.no-js .animate-slide-in-down { top: 0; }
+
+.no-js .animate-slide-in-up { bottom: 0; }
+
+.animate-slide-in-left { left: -100%; }
+.no-js .animate-slide-in-left { left: 0; }
+
+.animate-slide-in-right { right: -100%; }
+.no-js .animate-slide-in-right { right: 0; }
+
+
+/* Headline
+/* ================================================= */
+.vi {
+  margin: 150px auto 0;
+  max-width: 780px;
+}
+
+@media (max-width: 767px) {
+  .vi { margin-top: 50px; }
+}
+
+
+/* Quote
+/* ================================================= */
+.quote {
+  position: relative;
+  overflow: hidden;
+  margin: 40px 20px;
+}
+
+.quote-line {
+  display: block;
+  position: relative;
+  height: 1px;
+}
+
+.quote cite::before {
+  content: "-";
+  padding: 0 5px;
+}
+
+.quote-icon { position: absolute; }
+
+.quote-icon.animate-slide-in-down,
+.quote-icon.animate-slide-in-up { opacity: 0; }
+.no-js .quote-icon.animate-slide-in-down,
+.no-js .quote-icon.animate-slide-in-up { opacity: 1; }
+
+.quote-icon-start { left: 0; }
+.quote-icon-start.animate-slide-in-down { top: -10px; }
+.no-js .quote-icon-start.animate-slide-in-down { top: 0; }
+
+.quote-icon-end { right: 0; }
+.quote-icon-end.animate-slide-in-up { bottom: -10px; }
+.no-js .quote-icon-end.animate-slide-in-up { bottom: 0; }
+
+.quote-content { margin: 30px auto 0; }
+
+.quote-author { margin: 10px auto 30px; }
+
+
+/* Links
+/* ================================================= */
+.links {
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.links a {
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  transition: border .3s ease, color .3s ease;
+}
+
+.links a:hover { border-bottom: 1px solid; }
+
+.links a:active { top: 1px !important; }
+
+.links a:first-child { margin-left: 0; }
+
+
+/* Location
+/* ================================================= */
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.location-icon { font-size: 14px; }
+
+.location-text {
+  margin-left: 6px;
+  font-size: 13px;
+}
+
+.relocating {
+  opacity: 0;
+  font-size: 13px;
+  transition: all .3s ease;
+}
+
+
+/* LIGHT MODE
+/* ================================================= */
+html { background-color: white; }
+body { color: #333; font-weight: 400;}
+::selection { background: #222; color: white; }
+h1 { 
+  color: #222;
+font-weight: 400;
+ }
+.quote { color: #666; }
+.quote-icon { color: #ccc; }
+.quote-line { background: #eee; }
+a { color: #333; }
+.links a { border-bottom-color: #999; }
+.links a:hover { border-bottom-color: #333; }
+.location { color: #666; }
+.relocating { color: #ccc; }
+
+
+/* DARK MODE
+/* ================================================= */
+.dark { background: #121621; }
+.dark body { color: #6C7486; }
+.dark ::selection { background: #222; color: #99A3BA; }
+.dark h1 { color: #E4ECFA; }
+.dark .quote { color: #6C7486; }
+.dark .quote-icon { color: #3F4656; }
+.dark .quote-line { background: #242836; }
+.dark a { color: #99A3BA; }
+.dark .links a { border-bottom-color: #6C7486; }
+.dark .links a:hover { color: #E4ECFA; border-bottom-color: #99A3BA; }
+.dark .location { color: #6C7486; }
+
+.aplayer {
+  text-align: left;
+}
+
+/* .icon {
+  width: 1.5em; height: 1.5em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+} */
+
+</style>
+
+<body>
+  <div class="vi">
+    <h1 class="animate-slide-in-down">Hello, it's Focus.</h1>
+    <div class="quote">
+      <span class="quote-line quote-line-start animate-slide-in-left"></span>
+      <p class="quote-content animate-slide-in-down">A web developer, photographer and Chinese writer. On hobby levels.</p>
+      <p class="quote-author animate-slide-in-down"></p>
+      <span class="quote-line quote-line-end animate-slide-in-right"></span>
+    </div>
+    <div class="links">
+      <a href="https://git.io/hifocus" class="animate-slide-in-down" target="_blank" >GitHub</a>
+      <a href="https://www.justhx.com" class="animate-slide-in-down" target="_blank" >Chinese Blog</a>
+      <a href="https://status.justhx.com" class="animate-slide-in-down" target="_blank" >Service Status</a>
+      <a href="https://hx.getrbq.com" class="animate-slide-in-down" target="_blank" >Links</a>
+      <a href="mailto:im.hx@live.cn" class="animate-slide-in-down" target="_blank" >Email</a>
+      <a href="https://space.bilibili.com/38122450" class="animate-slide-in-down" target="_blank">Bilibili</a>
+      <a href="https://bit.ly/focus-ytb" class="animate-slide-in-down" target="_blank">YouTube</a>
+      <!-- <svg class="icon" aria-hidden="true"><use xlink:href="#icon-git"></use></svg>
+      <svg class="icon" aria-hidden="true"><use xlink:href="#icon-behance"></use></svg>
+      <svg class="icon" aria-hidden="true"><use xlink:href="#icon-you-tube"></use></svg>
+      <svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili"></use></svg>
+      <svg class="icon" aria-hidden="true"><use xlink:href="#icon-blog"></use></svg>
+      <svg class="icon" aria-hidden="true"><use xlink:href="#icon-email"></use></svg> -->
+      <!-- <a href="https://t.me/huangxin" class="animate-slide-in-down" target="_blank" >Telegram Contact</a> -->
+      <!-- <a href="https://www.justhx.com/friends/" class="animate-slide-in-down" target="_blank" >Friends</a> -->
+    </div>
+      <script type="application/javascript">
+        function getgeoip(json){
+          // document.getElementById("welcome").innerHTML = "Hope you are doing well in " + json.city + " :)";
+          document.getElementById("ipdisplay").innerHTML = "远方的你，来自 "+ json.ip + ", " + json.organization; // InnerHTML here for IP & ISP display
+        }
+      </script>
+      <div><br>
+          <!-- <span class="location-text animate-slide-in-down" id="welcome"></span><br> -->
+          <span class="location-text animate-slide-in-down">This page is modified from <a href="https://github.com/iissnan/iissnan.github.com" target="_blank">Vi</a>.<br>#staysuper #superfocus</span>
+          <br><span class="location-text animate-slide-in-down" id="ipdisplay"></span>       
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/aplayer@1.10.1,npm/meting@2.0.1/dist/Meting.min.js"></script> -->
+<script>
+    $(function () {
+      var SLIDE_IN_DOWN = { opacity: 1, top: 0 };
+      var SLIDE_IN_UP = { opacity: 1, bottom: 0 };
+      var SLIDE_IN_LEFT = { left: 0 };
+      var SLIDE_IN_RIGHT = { right: 0 };
+
+      registerCheatCode();
+      executeAnimations();
+
+      function executeAnimations() {
+        $.when()
+          .then(animateTitle)
+          .then(animateQuote)
+          .then(animateLinks)
+          .then(animateLocation);
+      }
+
+      function animateTitle() {
+        return animate('h1', SLIDE_IN_DOWN);
+      }
+
+      function animateQuote() {
+        return $.when(
+          animate('.quote-line-start', SLIDE_IN_LEFT),
+          animate('.quote-line-end',SLIDE_IN_RIGHT),
+          animate('.quote-icon-start', SLIDE_IN_DOWN),
+          animate('.quote-icon-end', SLIDE_IN_UP)
+        )
+          .then(function () {
+            return animate('.quote-content', SLIDE_IN_DOWN);
+          })
+          .then(function () {
+            return animate('.quote-author', SLIDE_IN_DOWN);
+          });
+      }
+
+      function animateLinks() {
+        var DELAY_STEP = 200;
+        var elements = $('.links a');
+        var concurrent = $.makeArray(elements)
+          .map(function (element, index) {
+            return animate(element, SLIDE_IN_DOWN, index * DELAY_STEP);
+          });
+
+        return $.when.apply($, concurrent);
+      }
+
+      function animateLocation() {
+        return $.when(
+          animate('.location-icon', SLIDE_IN_UP),
+          animate('.location-text', SLIDE_IN_DOWN)
+        );
+      }
+
+      function animate(selector, properties, delay, options) {
+        delay = delay || 0;
+        return $(selector).delay(delay)
+          .animate(properties, options)
+          .promise();
+      }
+
+      function registerCheatCode() {
+        $(document.body).on('keydown', function (event) {
+          var KEY_B = 66;
+
+          // if (event.which === KEY_B) {
+          //   $('.relocate-location').text('Bookmark Page');
+          //   $('.relocating').css('opacity', 1);
+
+          //   window.setTimeout(function () {
+          //     window.location.href = '/bookmarks.html';
+          //   }, 1000);
+          // }
+        });
+      }
+    });
+  </script>
+  <!-- <script src="https://at.alicdn.com/t/font_1567491_2pm2uragn6n.js"></script> -->
+  <!-- <script async src="https://api.ip.sb/geoip?callback=getgeoip"></script>Geo IP API Imported From Here -->
+</body>
+<!-- <meting-js
+server="tencent"
+type="playlist"
+id="921071360"
+fixed="true"
+theme="#121621"
+loop="one"
+preload="auto">
+</meting-js> -->
+</html>
